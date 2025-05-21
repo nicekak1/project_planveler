@@ -11,7 +11,11 @@
     }
   ],
   "paths": {
+<<<<<<< HEAD
     "/insert_test.php": {
+=======
+    "/login.php": {
+>>>>>>> bd8d2e0390dc6db9c3760093bc5fc54178e066d7
       "post": {
         "summary": "Insert new location",
         "requestBody": {
