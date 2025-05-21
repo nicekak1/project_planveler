@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/insert.php": {
+    "/insert_test.php": {
       "post": {
         "summary": "Insert new location",
         "requestBody": {
