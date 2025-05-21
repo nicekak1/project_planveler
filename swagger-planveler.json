@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/insert_test.php": {
+    "/insert10.php": {
       "post": {
         "summary": "Insert new location",
         "requestBody": {
@@ -22,24 +22,14 @@
                 "type": "object",
                 "properties": {
                   "location_name": {
-                    "type": "list"
+                    "type": "array",
+                    "items": { "type": "string" }
                   },
-                  "lat": {
-                    "type": "object"
-                  },
-                  "lng": {
-                    "type": "ints"
-                  },
-                  "location_type": {
-                    "type": aaaaa
-                  }
+                  "lat": { "type": "string" },
+                  "lng": { "type": "integer" },
+                  "location_type": { "type": "string" }
                 },
-                "required": [
-                  "location_name",
-                  "lat",
-                  "lng",
-                  "location_type"
-                ]
+                "required": ["location_name", "lat", "lng", "location_type"]
               }
             }
           }
@@ -47,6 +37,76 @@
         "responses": {
           "200": {
             "description": "Successful insertion"
+          }
+        }
+      }
+    },
+    "/login.php": {
+      "post": {
+        "summary": "User login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                },
+                "required": ["username", "password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/update.php": {
+      "get": {
+        "summary": "Get user data",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User data retrieved"
+          }
+        }
+      },
+      "post": {
+        "summary": "Update user data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user_id": { "type": "integer" },
+                  "username": { "type": "string" },
+                  "email": { "type": "string" }
+                },
+                "required": ["user_id"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User updated successfully"
           }
         }
       }
