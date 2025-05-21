@@ -22,16 +22,16 @@
                 "type": "object",
                 "properties": {
                   "location_name": {
-                    "type": "string"
+                    "type": "list"
                   },
                   "lat": {
-                    "type": "string"
+                    "type": "object"
                   },
                   "lng": {
-                    "type": "string"
+                    "type": "ints"
                   },
                   "location_type": {
-                    "type": "string"
+                    "type": aaaaa
                   }
                 },
                 "required": [
