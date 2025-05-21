@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Planveler API",
+    "version": "1.0.0",
+    "description": "API documentation for Planveler project"
+  },
+  "servers": [
+    {
+      "url": "http://localhost"
+    }
+  ],
+  "paths": {
+    "/insert.php": {
+      "post": {
+        "summary": "Insert new location",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "location_name": {
+                    "type": "string"
+                  },
+                  "lat": {
+                    "type": "string"
+                  },
+                  "lng": {
+                    "type": "string"
+                  },
+                  "location_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "location_name",
+                  "lat",
+                  "lng",
+                  "location_type"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful insertion"
+          }
+        }
+      }
+    }
+  }
+}
