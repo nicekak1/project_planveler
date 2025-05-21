@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/insert.php": {
+    "/login.php": {
       "post": {
         "summary": "Insert new location",
         "requestBody": {
