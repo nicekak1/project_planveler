@@ -1,0 +1,23 @@
+{
+  "name": "project_planveler",
+  "version": "1.0.0",
+  "description": "เป็นโปรเจ็คที่ผมทำกับเพื่อนๆในทีมอีก3คน\r เป็นเว็บเกี่ยวกับการท่องเที่ยวแบบทริป\r สามารถรับชมได้ที่ http://planveler.com/",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicekak1/project_planveler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicekak1/project_planveler/issues"
+  },
+  "homepage": "https://github.com/nicekak1/project_planveler#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
